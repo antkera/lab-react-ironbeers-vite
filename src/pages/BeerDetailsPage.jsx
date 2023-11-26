@@ -1,3 +1,9 @@
-function BeerDetailsPage() {}
+import BeerDetails from "../components/BeerDetails";
 
-export default BeerDetailsPage;
+export default function BeerDetailsPage() {
+  return (
+    <div>
+      <BeerDetails />
+    </div>
+  );
+}
