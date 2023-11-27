@@ -13,11 +13,13 @@ export default function AllBeersPage() {
   };
 
   const [beers, setBeers] = useState([]);
+ 
+ 
   const deployBeers = async () => {
     try {
         console.log("desplegando cervezas")
       const response = await axios.get(
-        q? `https://ih-beers-api2.herokuapp.com/beers/search?q={${q}}`//! como es la query???
+        q? `https://ih-beers-api2.herokuapp.com/beers/search?q=${q}`
         : "https://ih-beers-api2.herokuapp.com/beers"
       );
       setBeers(response.data);
