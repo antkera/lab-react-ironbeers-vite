@@ -12,6 +12,7 @@ export default function AddBeerPage() {
       attenuation_level: e.target.attenuation_level.value,
       contributed_by: e.target.contributed_by.value,
       image_url: e.target.image_url.value,
+      tagline: e.target.tagline.value,
     };
     try {
       await axios.post(
@@ -23,7 +24,11 @@ export default function AddBeerPage() {
       console.log(error);
     }
   };
-
+  //   <label htmlFor="tagline">tagline</label>
+  //   <br />
+  //   <input type="text" name="tagline" />
+  //   <hr />
+  //* Estas etiquetas faltan según los test.
   return (
     <div className="AddBeerPage">
       <h3>Agrega una nueva cerveza</h3>
